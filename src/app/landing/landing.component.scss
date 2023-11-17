@@ -1,0 +1,251 @@
+.container {
+  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 556px;
+    padding: 96px 0;
+  }
+  .heading {
+    width: 100%;
+    max-width: 800px;
+    height: 124px;
+    margin: 0 auto;
+    .title {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 60px;
+    }
+
+    .description {
+      margin: 8px 0;
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  .table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // column-gap: 52px;
+    // row-gap: 72px;
+    gap: 96px;
+    height: 368px;
+
+    .item {
+      grid-column: span 1;
+
+      .headline {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 700;
+      }
+
+      .description {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+.metrics {
+  &-content {
+    > div {
+      height: 178px;
+    }
+    display: flex;
+    justify-content: space-between;
+    padding-block: 80px;
+    .heading {
+      width: 100%;
+      max-width: 592px;
+      .title {
+        font-size: 48px;
+        line-height: 60px;
+        font-weight: 700;
+      }
+      .description {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+    .content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+      max-width: 592px;
+      .item {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 280px;
+        .detail {
+          width: 100%;
+          max-width: 216px;
+          .number {
+            font-size: 36px;
+            line-height: 45px;
+            font-weight: 700;
+          }
+          label {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    padding-inline: 20px;
+    box-sizing: border-box;
+  }
+  .features {
+    &-content {
+      padding: 48px 0;
+    }
+    &-content, .table {
+      height: auto;
+      gap: 48px;
+    }
+    .heading {
+      height: auto;
+    }
+    .table {
+      grid-template-columns: 1fr;
+    }
+  }
+  .metrics-content {
+    flex-direction: column;
+    padding-block: 48px;
+    .heading {
+      .title {
+        font-size: 30px;
+        line-height: 40px;
+      }
+      .description {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    .content {
+      grid-template-columns: 1fr;
+      height: auto;
+      gap: 24px;
+      .item {
+        .icon img{
+          padding: 7px;
+        }
+        .detail {
+          .number {
+            font-size: 24px;
+            line-height: 32px;
+            margin: 0;
+          }
+          label {
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .container {
+    padding-inline: 40px;
+    box-sizing: border-box;
+  }
+  // .hero {
+  //   background-position: right;
+  //   &-content {
+  //     flex-direction: column;
+  //     height: auto;
+  //     .summary {
+  //       width: 100%;
+  //       margin: 0;
+  //       padding: 0;
+  //       .header {
+  //         margin-top: 120px;
+  //         h1 {
+  //           font-size: 36px;
+  //           line-height: 45px;
+  //         }
+  //         p {
+  //           font-size: 18px;
+  //           line-height: 28px;
+  //         }
+  //       }
+  //     }
+  //     .phone img {
+  //       width: 100%;
+  //     }
+  //   }
+  // }
+  .features {
+    &-content {
+      padding: 48px 0;
+    }
+    &-content, .table {
+      height: auto;
+      gap: 48px;
+    }
+    .heading {
+      height: auto;
+    }
+    .table {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .metrics-content {
+    flex-direction: column;
+    padding-block: 80px;
+    height: 297px;
+    .heading {
+      height: 81px;
+      .title {
+        font-size: 30px;
+        line-height: 40px;
+      }
+      .description {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    .content {
+      height: 168px;
+      gap: 24px;
+      .item {
+        .icon img{
+          padding: 7px;
+        }
+        .detail {
+          .number {
+            font-size: 24px;
+            line-height: 32px;
+            margin: 0;
+          }
+          label {
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
